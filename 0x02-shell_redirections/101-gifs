@@ -1,2 +1,2 @@
 #!/bin/bash
-trouver . -nom \* .gif -type f -printf " %f\n "  | LC_COLLATE=C sort --ignore-case | tour | couper -c 5- | tour
+find . -name \*.gif -type f -printf "%f\n" | LC_COLLATE=C sort --ignore-case | rev | cut -c 5- | rev
